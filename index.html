@@ -53,10 +53,10 @@
         .nav-links a:hover { color: var(--secondary-color); }
         .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--primary-color); cursor: pointer; }
 
-        /* --- HERO SECTION (COM SUA IMAGEM famili.png) --- */
+        /* --- HERO SECTION (AJUSTADA: Mais transparente e letras menores) --- */
         .hero {
-            /* Aqui está configurado para buscar o arquivo famili.png na mesma pasta */
-            background: linear-gradient(to right, rgba(26, 37, 48, 0.95) 0%, rgba(26, 37, 48, 0.6) 100%), url('famili.png');
+            /* AJUSTE 1: Transparência alterada de 0.95/0.6 para 0.85/0.5 */
+            background: linear-gradient(to right, rgba(26, 37, 48, 0.85) 0%, rgba(26, 37, 48, 0.5) 100%), url('famili.png');
             background-size: cover;
             background-position: center;
             padding: 180px 0 160px;
@@ -69,10 +69,11 @@
             max-width: 650px;
         }
         .hero-content h1 { 
-            font-size: 3.8rem; 
+            /* AJUSTE 2: Tamanho da fonte reduzido de 3.8rem para 3rem */
+            font-size: 3rem; 
             margin-bottom: 25px; 
             color: var(--text-light); 
-            line-height: 1.1;
+            line-height: 1.2;
             font-weight: 800;
         }
         .hero-content h1 span {
@@ -80,8 +81,8 @@
         }
         .hero-content p { 
             margin-bottom: 35px; 
-            opacity: 0.9; 
-            font-size: 1.25rem; 
+            opacity: 0.95; /* Aumentei um pouco a opacidade do parágrafo para leitura */
+            font-size: 1.2rem; 
             max-width: 90%;
         }
         .hero-buttons { 
@@ -143,7 +144,7 @@
             .nav-links { display: none; }
             .mobile-menu-btn { display: block; }
             .hero { text-align: center; padding: 120px 0; justify-content: center; }
-            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content h1 { font-size: 2.2rem; } /* Ajustado para mobile também */
             .hero-buttons { justify-content: center; }
             .trust-item img { height: 48px; }
         }
