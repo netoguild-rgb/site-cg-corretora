@@ -48,11 +48,9 @@
         .nav-links a:hover { color: var(--secondary-color); }
         .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--primary-color); cursor: pointer; }
 
-        /* HERO SECTION (AQUI É ONDE TROCA A IMAGEM DE FUNDO) */
+        /* HERO SECTION */
         .hero {
-            /* O linear-gradient cria a máscara escura sobre a foto para o texto ficar legível */
-            /* TROQUE O LINK DENTRO DO url('') PELA SUA IMAGEM */
-            background: linear-gradient(rgba(26, 37, 48, 0.85), rgba(26, 37, 48, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* <-- COLE O LINK DA SUA IMAGEM AQUI DENTRO DAS ASPAS */
+            background: linear-gradient(rgba(26, 37, 48, 0.85), rgba(26, 37, 48, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             padding: 150px 0;
@@ -62,27 +60,38 @@
         .hero-content h1 { font-size: 3.2rem; margin-bottom: 20px; color: var(--text-light); line-height: 1.2; }
         .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
 
-        /* --- TRUST BAR (LOGOS GOOGLE) --- */
+        /* --- TRUST BAR (LOGOS RENDERIZADAS E SIMÉTRICAS) --- */
         .trust-bar { background-color: #fff; padding: 40px 0; border-bottom: 1px solid #eee; }
         .trust-grid { 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             flex-wrap: wrap; 
-            gap: 40px; 
+            gap: 50px; /* Espaçamento simétrico entre as logos */
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px; /* Altura fixa para o container da logo */
+            width: 150px; /* Largura fixa para o container da logo */
         }
         .trust-item img {
-            height: 64px;
+            max-height: 100%; /* Garante que a logo não ultrapasse a altura do container */
+            max-width: 100%; /* Garante que a logo não ultrapasse a largura do container */
             width: auto;
+            height: auto;
+            object-fit: contain; /* Mantém a proporção da imagem */
             filter: grayscale(100%);
-            opacity: 0.6;
+            opacity: 0.7;
             transition: all 0.3s ease;
             cursor: pointer;
         }
+        /* Removemos o texto alt */
         .trust-item img:hover {
             filter: grayscale(0%);
             opacity: 1;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         /* SERVIÇOS */
@@ -115,7 +124,8 @@
             .mobile-menu-btn { display: block; }
             .hero-content h1 { font-size: 2.2rem; }
             .hero { padding: 100px 0; }
-            .trust-item img { height: 48px; }
+            .trust-grid { gap: 30px; } /* Espaçamento menor no mobile */
+            .trust-item { height: 60px; width: 120px; } /* Logos menores no mobile */
         }
     </style>
 </head>
@@ -155,22 +165,22 @@
     <div class="trust-bar">
         <div class="container trust-grid">
             <div class="trust-item">
-                <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://portoseguro.com.br&size=128" alt="Porto Seguro">
+                <img src="image_1.png">
             </div>
             <div class="trust-item">
-                <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://allianz.com.br&size=128" alt="Allianz">
+                <img src="image_3.png">
             </div>
             <div class="trust-item">
-                <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://bradescoseguros.com.br&size=128" alt="Bradesco">
+                <img src="image_5.png">
             </div>
             <div class="trust-item">
-                <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://mapfre.com.br&size=128" alt="Mapfre">
+                <img src="image_4.png">
             </div>
             <div class="trust-item">
-                <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://azulseguros.com.br&size=128" alt="Azul Seguros">
+                <img src="image_0.png">
             </div>
              <div class="trust-item">
-                <img src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://sulamerica.com.br&size=128" alt="SulAmérica">
+                <img src="image_2.png">
             </div>
         </div>
     </div>
