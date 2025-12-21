@@ -48,19 +48,21 @@
         .nav-links a:hover { color: var(--secondary-color); }
         .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--primary-color); cursor: pointer; }
 
-        /* HERO SECTION */
+        /* HERO SECTION (AQUI É ONDE TROCA A IMAGEM DE FUNDO) */
         .hero {
-            background: linear-gradient(rgba(26, 37, 48, 0.85), rgba(26, 37, 48, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            /* O linear-gradient cria a máscara escura sobre a foto para o texto ficar legível */
+            /* TROQUE O LINK DENTRO DO url('') PELA SUA IMAGEM */
+            background: linear-gradient(rgba(26, 37, 48, 0.85), rgba(26, 37, 48, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); /* <-- COLE O LINK DA SUA IMAGEM AQUI DENTRO DAS ASPAS */
             background-size: cover;
             background-position: center;
-            padding: 140px 0;
+            padding: 150px 0;
             text-align: center;
             color: var(--text-light);
         }
-        .hero-content h1 { font-size: 3rem; margin-bottom: 20px; color: var(--text-light); line-height: 1.2; }
-        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        .hero-content h1 { font-size: 3.2rem; margin-bottom: 20px; color: var(--text-light); line-height: 1.2; }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
 
-        /* --- TRUST BAR (LOGOS GOOGLE - INFALÍVEL) --- */
+        /* --- TRUST BAR (LOGOS GOOGLE) --- */
         .trust-bar { background-color: #fff; padding: 40px 0; border-bottom: 1px solid #eee; }
         .trust-grid { 
             display: flex; 
@@ -69,25 +71,13 @@
             flex-wrap: wrap; 
             gap: 40px; 
         }
-        .trust-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
         .trust-item img {
-            height: 64px; /* Tamanho bom para ícones do Google */
+            height: 64px;
             width: auto;
             filter: grayscale(100%);
             opacity: 0.6;
             transition: all 0.3s ease;
             cursor: pointer;
-        }
-        /* Se a imagem falhar, mostra o texto alt de forma bonita */
-        .trust-item img:after { 
-            content: attr(alt); 
-            font-size: 16px; 
-            color: #333;
-            display: block;
         }
         .trust-item img:hover {
             filter: grayscale(0%);
@@ -123,7 +113,8 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .mobile-menu-btn { display: block; }
-            .hero-content h1 { font-size: 2rem; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero { padding: 100px 0; }
             .trust-item img { height: 48px; }
         }
     </style>
@@ -151,7 +142,7 @@
     <section class="hero" id="home">
         <div class="container hero-content">
             <h1>Segurança Inteligente para<br>Você e Seu Patrimônio</h1>
-            <p style="margin-bottom: 30px; opacity: 0.9;">Especialistas em encontrar o melhor custo-benefício para sua proteção.</p>
+            <p style="margin-bottom: 30px; opacity: 0.9; font-size: 1.2rem;">Especialistas em encontrar o melhor custo-benefício para sua proteção.</p>
             <div class="hero-buttons">
                 <a href="#cotacao" class="btn btn-primary">Fazer Cotação Online</a>
                 <a href="https://wa.me/5583SEUNUMERO?text=Olá, gostaria de uma cotação" class="btn btn-outline" target="_blank">
