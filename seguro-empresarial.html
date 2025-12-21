@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro Empresarial | CG Corretora</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><path d=%22M50 0L95 25V75L50 100L5 75V25L50 0Z%22 fill=%22%231a2530%22/><path d=%22M50 12L85 32V68L50 88L15 68V32L50 12Z%22 fill=%22%23ff6b35%22/><text x=%2250%22 y=%2262%22 font-family=%22sans-serif%22 font-weight=%22800%22 font-size=%2238%22 text-anchor=%22middle%22 fill=%22white%22>CG</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary-color: #1a2530; --secondary-color: #ff6b35; --accent-color: #f4f7f6; --text-dark: #333333; --success: #25d366; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; background-color: var(--accent-color); color: var(--text-dark); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        header { background: white; padding: 20px 0; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .back-link { text-decoration: none; color: var(--primary-color); font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
+        .page-hero { text-align: center; padding: 60px 20px; background: var(--primary-color); color: white; }
+        .page-hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 10px; }
+        .page-hero span { color: var(--secondary-color); }
+        .script-section { padding: 40px 20px; }
+        .script-card { background: white; margin-bottom: 30px; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 20px; border-left: 5px solid var(--secondary-color); transition: transform 0.3s; }
+        .script-card:hover { transform: translateY(-5px); }
+        .icon-box { font-size: 2.5rem; color: var(--secondary-color); min-width: 60px; text-align: center; }
+        .content-box h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin-bottom: 5px; color: var(--primary-color); }
+        .content-box p { font-size: 1.1rem; color: #555; }
+        .cta-box { text-align: center; margin: 60px 0; }
+        .btn-big { background-color: var(--success); color: white; padding: 20px 50px; font-size: 1.5rem; font-weight: 800; text-decoration: none; border-radius: 50px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); transition: 0.3s; display: inline-block; }
+        .btn-big:hover { transform: scale(1.05); background-color: #1ebd57; }
+        @media (max-width: 768px) { .script-card { flex-direction: column; text-align: center; border-left: none; border-top: 5px solid var(--secondary-color); } .page-hero h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+    <header><div class="container"><a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar para o Início</a></div></header>
+    <div class="page-hero"><div class="container"><h1>Não deixe um acidente<br>fechar as <span>suas portas</span>.</h1><p style="opacity: 0.8; font-size: 1.2rem; margin-top: 10px;">Segurança para o seu stock, equipamentos e para os seus funcionários.</p></div></div>
+    <div class="container script-section">
+        <div class="script-card"><div class="icon-box"><i class="fas fa-fire-extinguisher"></i></div><div class="content-box"><h3>Seu stock está protegido?</h3><p>Em caso de incêndio, alagamento ou danos elétricos, garantimos a reposição da mercadoria e do maquinário para você não parar.</p></div></div>
+        <div class="script-card"><div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div><div class="content-box"><h3>E se a empresa tiver que parar?</h3><p>A cobertura de <strong>Lucros Cessantes</strong> cobre as despesas fixas (aluguer, folha de pagamento) e o lucro líquido enquanto a empresa estiver fechada por sinistro.</p></div></div>
+        <div class="script-card"><div class="icon-box"><i class="fas fa-user-injured"></i></div><div class="content-box"><h3>Acidentes com clientes ou funcionários?</h3><p>Proteção de <strong>Responsabilidade Civil</strong>. Se alguém se machucar dentro da sua empresa, nós cobrimos as despesas médicas e judiciais.</p></div></div>
+        <div class="script-card"><div class="icon-box"><i class="fas fa-store-slash"></i></div><div class="content-box"><h3>Roubo de Equipamentos?</h3><p>Computadores, ferramentas e stock são alvos visados. Garanta a reposição rápida para manter a operação a funcionar.</p></div></div>
+        <div class="cta-box"><p style="margin-bottom: 20px; font-size: 1.2rem;">O custo do seguro é ínfimo perto do valor do seu negócio.</p><a href="index.html#cotacao" class="btn-big">COTE JÁ <i class="fas fa-check-circle"></i></a></div>
+    </div>
+</body>
+</html>
