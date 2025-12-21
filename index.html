@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CG Corretora de Seguros: Cotação online de seguro auto, vida, residencial e empresarial.">
+    <meta name="description" content="CG Corretora de Seguros: Cotação online de seguro auto, vida, residencial e empresarial. As melhores taxas do mercado.">
     <title>CG Corretora de Seguros | Proteção e Confiança</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* --- ESTILOS (DESIGN) --- */
+        /* --- ESTILOS GERAIS --- */
         :root {
-            --primary-color: #1a2530;
-            --secondary-color: #ff6b35;
+            --primary-color: #1a2530; /* Azul Escuro */
+            --secondary-color: #ff6b35; /* Laranja */
             --accent-color: #f4f7f6;
             --text-dark: #333333;
             --text-light: #ffffff;
-            --success: #25d366;
+            --success: #25d366; /* Verde WhatsApp */
             --transition: all 0.3s ease;
         }
 
@@ -28,6 +29,8 @@
         img { max-width: 100%; display: block; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* BOTÕES */
         .btn { display: inline-block; padding: 12px 30px; border-radius: 5px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; cursor: pointer; transition: var(--transition); border: none; }
         .btn-primary { background-color: var(--secondary-color); color: var(--text-light); }
         .btn-primary:hover { background-color: #e55a2b; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255,107,53,0.3); }
@@ -45,34 +48,53 @@
         .nav-links a:hover { color: var(--secondary-color); }
         .mobile-menu-btn { display: none; font-size: 1.5rem; color: var(--primary-color); cursor: pointer; }
 
-        /* HERO */
+        /* HERO SECTION */
         .hero {
             background: linear-gradient(rgba(26, 37, 48, 0.85), rgba(26, 37, 48, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
-            padding: 150px 0;
+            padding: 140px 0;
             text-align: center;
             color: var(--text-light);
         }
-        .hero-content h1 { font-size: 3rem; margin-bottom: 20px; color: var(--text-light); }
+        .hero-content h1 { font-size: 3rem; margin-bottom: 20px; color: var(--text-light); line-height: 1.2; }
         .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
 
-        /* TRUST BAR */
-        .trust-bar { background-color: #fff; padding: 30px 0; border-bottom: 1px solid #eee; }
-        .trust-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; opacity: 0.6; }
+        /* --- TRUST BAR (LOGOS DAS SEGURADORAS) --- */
+        .trust-bar { background-color: #fff; padding: 40px 0; border-bottom: 1px solid #eee; }
+        .trust-grid { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+        }
+        .trust-item img {
+            height: 40px; /* Altura padrão */
+            width: auto;
+            filter: grayscale(100%); /* Preto e branco */
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .trust-item img:hover {
+            filter: grayscale(0%); /* Cor original ao passar mouse */
+            opacity: 1;
+            transform: scale(1.1);
+        }
 
-        /* SERVICES */
+        /* SERVIÇOS */
         .services { padding: 80px 0; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
         .service-card { background: #fff; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border-bottom: 3px solid transparent; transition: var(--transition); }
         .service-card:hover { transform: translateY(-10px); border-bottom: 3px solid var(--secondary-color); }
         .service-icon { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px; }
         
-        /* CTA / FORM */
+        /* FORMULÁRIO / CTA */
         .cta-section { background-color: var(--primary-color); padding: 80px 0; color: white; }
-        .cta-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 40px; }
-        .cta-text { flex: 1; min-width: 300px; }
-        .cta-form { flex: 1; background: white; padding: 40px; border-radius: 10px; min-width: 300px; color: var(--text-dark); }
+        .cta-container { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
+        .cta-text { flex: 1; min-width: 300px; padding-top: 20px; }
+        .cta-form { flex: 1; background: white; padding: 40px; border-radius: 10px; min-width: 300px; color: var(--text-dark); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
         .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
@@ -81,15 +103,16 @@
         footer { background-color: #111; color: #888; padding: 60px 0 20px; font-size: 0.9rem; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
         
-        /* WHATSAPP FLOAT */
+        /* WHATSAPP FLUTUANTE */
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: var(--success); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 2000; transition: var(--transition); }
-        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #1ebd57; }
 
         /* RESPONSIVO */
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .mobile-menu-btn { display: block; }
             .hero-content h1 { font-size: 2rem; }
+            .trust-item img { height: 30px; margin: 10px; }
         }
     </style>
 </head>
@@ -106,6 +129,7 @@
                 <ul class="nav-links">
                     <li><a href="#home">Início</a></li>
                     <li><a href="#seguros">Seguros</a></li>
+                    <li><a href="#cotacao">Cotação</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -115,19 +139,33 @@
     <section class="hero" id="home">
         <div class="container hero-content">
             <h1>Segurança Inteligente para<br>Você e Seu Patrimônio</h1>
+            <p style="margin-bottom: 30px; opacity: 0.9;">Especialistas em encontrar o melhor custo-benefício para sua proteção.</p>
             <div class="hero-buttons">
-                <a href="#cotacao" class="btn btn-primary">Fazer Cotação</a>
-                <a href="https://wa.me/5583986226441?text=Olá, gostaria de uma cotação" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#cotacao" class="btn btn-primary">Fazer Cotação Online</a>
+                <a href="https://wa.me/5583999999999?text=Olá, gostaria de uma cotação" class="btn btn-outline" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
     <div class="trust-bar">
         <div class="container trust-grid">
-            <div class="trust-item">PORTO SEGURO</div>
-            <div class="trust-item">ALLIANZ</div>
-            <div class="trust-item">AZUL SEGUROS</div>
-            <div class="trust-item">BRADESCO</div>
+            <div class="trust-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Porto_Seguro_logo.svg" alt="Porto Seguro" title="Porto Seguro">
+            </div>
+            <div class="trust-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Allianz_logo.svg" alt="Allianz" title="Allianz Seguros">
+            </div>
+            <div class="trust-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Bradesco_logo.svg" alt="Bradesco Seguros" title="Bradesco Seguros">
+            </div>
+            <div class="trust-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Mapfre_logo.svg/2560px-Mapfre_logo.svg.png" alt="Mapfre" title="Mapfre Seguros">
+            </div>
+             <div class="trust-item">
+                <img src="https://logodownload.org/wp-content/uploads/2014/05/sulamerica-logo-1.png" alt="SulAmérica" title="SulAmérica Seguros">
+            </div>
         </div>
     </div>
 
@@ -135,22 +173,28 @@
         <div class="container">
             <div class="section-title">
                 <h2>Nossas Soluções</h2>
+                <p>Cobertura completa para todas as etapas da vida.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-car"></i></div>
-                    <h3>Auto</h3>
-                    <p>Proteção completa para seu veículo.</p>
+                    <h3>Seguro Auto</h3>
+                    <p>Proteção contra roubo, colisão e assistência 24h para seu veículo.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Vida</h3>
-                    <p>Segurança para quem você ama.</p>
+                    <h3>Seguro de Vida</h3>
+                    <p>Tranquilidade financeira para sua família em momentos difíceis.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-home"></i></div>
                     <h3>Residencial</h3>
-                    <p>Proteção contra roubo e incêndio.</p>
+                    <p>Proteja seu lar contra incêndio, roubo e danos elétricos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Empresarial</h3>
+                    <p>Segurança para o patrimônio e responsabilidade civil da sua empresa.</p>
                 </div>
             </div>
         </div>
@@ -159,27 +203,30 @@
     <section class="cta-section" id="cotacao">
         <div class="container cta-container">
             <div class="cta-text">
-                <h2>Cotação Rápida</h2>
-                <p>Preencha os dados abaixo. Nossa equipe entrará em contato com 3 opções de valores.</p>
+                <h2>Solicite sua Cotação Rápida</h2>
+                <p>Preencha os dados ao lado. Nossa equipe analisará o perfil em todas as seguradoras parceiras e retornará com as 3 melhores propostas.</p>
+                <br>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-headset fa-2x" style="color: var(--secondary-color);"></i>
+                    <div>
+                        <strong>Prefere ligar?</strong><br>
+                        (83) 99999-9999 </div>
+                </div>
             </div>
             
             <form action="https://formspree.io/f/mnjavdvb" method="POST" class="cta-form">
-                
                 <div class="form-group">
                     <label>Seu Nome</label>
                     <input type="text" name="nome" class="form-control" placeholder="Nome completo" required>
                 </div>
-
                 <div class="form-group">
                     <label>Seu E-mail</label>
                     <input type="email" name="email" class="form-control" placeholder="exemplo@email.com" required>
                 </div>
-
                 <div class="form-group">
                     <label>WhatsApp</label>
                     <input type="tel" name="whatsapp" class="form-control" placeholder="(DD) 99999-9999" required>
                 </div>
-
                 <div class="form-group">
                     <label>Tipo de Seguro</label>
                     <select name="tipo_seguro" class="form-control">
@@ -189,39 +236,47 @@
                         <option value="Empresarial">Seguro Empresarial</option>
                     </select>
                 </div>
-
                 <div class="form-group">
-                    <label>Mensagem (Opcional)</label>
-                    <textarea name="mensagem" class="form-control" rows="3"></textarea>
+                    <label>Observações (Opcional)</label>
+                    <textarea name="mensagem" class="form-control" rows="2" placeholder="Ex: Carro modelo tal, ano tal..."></textarea>
                 </div>
-
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Solicitar Cotação</button>
             </form>
-
         </div>
     </section>
 
-    <footer>
+    <footer id="contato">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>CG Corretora</h4>
-                    <p>CNPJ: 00.000.000/0001-00</p>
+                    <p>Especialistas em proteger o que é mais valioso para você. Atendimento em todo o Brasil.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Links</h4>
+                    <h4>Links Rápidos</h4>
                     <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#seguros">Seguros</a></li>
                         <li><a href="politica.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Campina Grande - PB</li>
+                        <li><i class="fas fa-envelope"></i> contato@cgcorretora.com.br</li>
                     </ul>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 20px; border-top: 1px solid #333; padding-top: 20px;">
-                &copy; 2024 CG Corretora.
+                &copy; 2024 CG Corretora de Seguros. Todos os direitos reservados.
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5583986226441" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/5583999999999?text=Olá, vim pelo site e gostaria de uma cotação." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -244,6 +299,7 @@
                         navLinks.style.width = '100%';
                         navLinks.style.padding = '20px';
                         navLinks.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                        navLinks.style.zIndex = '999';
                     }
                 });
             }
@@ -264,7 +320,7 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    if(window.innerWidth <= 768 && navLinks) navLinks.style.display = 'none';
+                    if(window.innerWidth <= 768 && navLinks) navLinks.style.display = 'none'; // Fecha menu mobile ao clicar
                     const target = document.querySelector(this.getAttribute('href'));
                     if(target) target.scrollIntoView({ behavior: 'smooth' });
                 });
@@ -273,4 +329,3 @@
     </script>
 </body>
 </html>
-
